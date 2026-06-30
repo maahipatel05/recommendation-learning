@@ -938,20 +938,7 @@ with home_tab:
     # PHASE 3 — RESULTS
     # ────────────────────────────────────────────────────────────────────────
     elif st.session_state.phase == "results":
-        import streamlit.components.v1 as components
-        components.html('''
-            <script>
-                (function() {
-                    var doc = window.parent.document;
-                    var anchor = doc.getElementById('ec-top-anchor');
-                    if (anchor) {
-                        anchor.scrollIntoView({behavior: "instant", block: "start"});
-                        setTimeout(function() { anchor.scrollIntoView({behavior: "instant", block: "start"}); }, 150);
-                        setTimeout(function() { anchor.scrollIntoView({behavior: "instant", block: "start"}); }, 400);
-                    }
-                })();
-            </script>
-        ''', height=0)
+
         
 
 
