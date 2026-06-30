@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Curriculum Analytics Map</title>
-    <script src="https://bumbu.github.io/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -20,7 +20,7 @@
         .main-container {
             display: flex;
             flex: 1;
-            gap: 24px;
+            gap: 16px;
             height: calc(100% - 65px);
         }
         
@@ -35,11 +35,11 @@
         }
         
         .info-panel {
-            width: 380px;
+            width: 210px;
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 32px;
+            padding: 16px;
             box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
             display: flex;
             flex-direction: column;
@@ -184,7 +184,7 @@
         svg { width: 100%; height: 100%; cursor: grab; }
         svg:active { cursor: grabbing; }
         
-        .node { cursor: pointer !important; }
+        
         .node polygon { transition: fill 0.2s, stroke 0.2s; }
         
         /* Edge styling with beautiful colors */
@@ -222,6 +222,16 @@
             stroke-width: 2.5px !important;
         }
     </style>
+
+    
+
+    <style>
+        
+        .node text {
+            fill: #000000 !important;
+            font-weight: 700 !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -232,6 +242,7 @@
 
     <div class="main-container">
         <div class="graph-container">
+            <button id="reset-view-btn" style="position: absolute; top: 16px; left: 16px; z-index: 1000; padding: 8px 16px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-size: 13px; font-weight: 600; color: #334155; cursor: pointer;">Reset View</button>
             <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -246,20 +257,29 @@
 <!-- ch10_sec1_obj1 -->
 <g id="ch10_sec1_obj1" class="node">
 <title>ch10_sec1_obj1</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M781.6,-307.36C781.6,-307.36 604,-307.36 604,-307.36 598,-307.36 592,-301.36 592,-295.36 592,-295.36 592,-226.68 592,-226.68 592,-220.68 598,-214.68 604,-214.68 604,-214.68 781.6,-214.68 781.6,-214.68 787.6,-214.68 793.6,-220.68 793.6,-226.68 793.6,-226.68 793.6,-295.36 793.6,-295.36 793.6,-301.36 787.6,-307.36 781.6,-307.36"/>
-<text xml:space="preserve" text-anchor="middle" x="692.8" y="-281.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch10_sec1_obj1</text>
-<text xml:space="preserve" text-anchor="middle" x="692.8" y="-256.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Describe the structure of</text>
-<text xml:space="preserve" text-anchor="middle" x="692.8" y="-244.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">prokaryotic and eukaryotic</text>
-<text xml:space="preserve" text-anchor="middle" x="692.8" y="-232.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">genomes</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M781.6,-307.36C781.6,-307.36 604,-307.36 604,-307.36 598,-307.36 592,-301.36 592,-295.36 592,-295.36 592,-226.68 592,-226.68 592,-220.68 598,-214.68 604,-214.68 604,-214.68 781.6,-214.68 781.6,-214.68 787.6,-214.68 793.6,-220.68 793.6,-226.68 793.6,-226.68 793.6,-295.36 793.6,-295.36 793.6,-301.36 787.6,-307.36 781.6,-307.36"/>
+
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="692.8" y="-281.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch10_sec1_obj1</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="692.8" y="-256.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Describe the structure of</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="692.8" y="-244.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">prokaryotic and eukaryotic</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="692.8" y="-232.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">genomes</text>
+</g></g>
 <!-- ch10_sec2_obj1 -->
 <g id="ch10_sec2_obj1" class="node">
 <title>ch10_sec2_obj1</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M485.6,-86.68C485.6,-86.68 308,-86.68 308,-86.68 302,-86.68 296,-80.68 296,-74.68 296,-74.68 296,-18 296,-18 296,-12 302,-6 308,-6 308,-6 485.6,-6 485.6,-6 491.6,-6 497.6,-12 497.6,-18 497.6,-18 497.6,-74.68 497.6,-74.68 497.6,-80.68 491.6,-86.68 485.6,-86.68"/>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-60.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch10_sec2_obj1</text>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-35.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Describe the three stages</text>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-23.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">of interphase</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M485.6,-86.68C485.6,-86.68 308,-86.68 308,-86.68 302,-86.68 296,-80.68 296,-74.68 296,-74.68 296,-18 296,-18 296,-12 302,-6 308,-6 308,-6 485.6,-6 485.6,-6 491.6,-6 497.6,-12 497.6,-18 497.6,-18 497.6,-74.68 497.6,-74.68 497.6,-80.68 491.6,-86.68 485.6,-86.68"/>
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-60.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch10_sec2_obj1</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-35.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Describe the three stages</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-23.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">of interphase</text>
+</g></g>
 <!-- ch10_sec1_obj1&#45;&gt;ch10_sec2_obj1 -->
 <g id="edge____ch10_sec1_obj1___ch10_sec2_obj1" class="edge">
 <title>ch10_sec1_obj1&#45;&gt;ch10_sec2_obj1</title>
@@ -269,12 +289,17 @@
 <!-- ch10_sec2_obj2 -->
 <g id="ch10_sec2_obj2" class="node">
 <title>ch10_sec2_obj2</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M1077.6,-92.68C1077.6,-92.68 900,-92.68 900,-92.68 894,-92.68 888,-86.68 888,-80.68 888,-80.68 888,-12 888,-12 888,-6 894,0 900,0 900,0 1077.6,0 1077.6,0 1083.6,0 1089.6,-6 1089.6,-12 1089.6,-12 1089.6,-80.68 1089.6,-80.68 1089.6,-86.68 1083.6,-92.68 1077.6,-92.68"/>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-66.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch10_sec2_obj2</text>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-41.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Discuss the behavior of</text>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-29.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">chromosomes during</text>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-17.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">karyokinesis/mitosis</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M1077.6,-92.68C1077.6,-92.68 900,-92.68 900,-92.68 894,-92.68 888,-86.68 888,-80.68 888,-80.68 888,-12 888,-12 888,-6 894,0 900,0 900,0 1077.6,0 1077.6,0 1083.6,0 1089.6,-6 1089.6,-12 1089.6,-12 1089.6,-80.68 1089.6,-80.68 1089.6,-86.68 1083.6,-92.68 1077.6,-92.68"/>
+
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-66.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch10_sec2_obj2</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-41.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Discuss the behavior of</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-29.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">chromosomes during</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-17.39" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">karyokinesis/mitosis</text>
+</g></g>
 <!-- ch10_sec1_obj1&#45;&gt;ch10_sec2_obj2 -->
 <g id="edge____ch10_sec1_obj1___ch10_sec2_obj2" class="edge">
 <title>ch10_sec1_obj1&#45;&gt;ch10_sec2_obj2</title>
@@ -284,11 +309,15 @@
 <!-- ch4_sec3_obj1 -->
 <g id="ch4_sec3_obj1" class="node">
 <title>ch4_sec3_obj1</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M781.6,-516.04C781.6,-516.04 604,-516.04 604,-516.04 598,-516.04 592,-510.04 592,-504.04 592,-504.04 592,-447.36 592,-447.36 592,-441.36 598,-435.36 604,-435.36 604,-435.36 781.6,-435.36 781.6,-435.36 787.6,-435.36 793.6,-441.36 793.6,-447.36 793.6,-447.36 793.6,-504.04 793.6,-504.04 793.6,-510.04 787.6,-516.04 781.6,-516.04"/>
-<text xml:space="preserve" text-anchor="middle" x="692.8" y="-489.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch4_sec3_obj1</text>
-<text xml:space="preserve" text-anchor="middle" x="692.8" y="-464.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Describe the structure of</text>
-<text xml:space="preserve" text-anchor="middle" x="692.8" y="-452.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">eukaryotic cells</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M781.6,-516.04C781.6,-516.04 604,-516.04 604,-516.04 598,-516.04 592,-510.04 592,-504.04 592,-504.04 592,-447.36 592,-447.36 592,-441.36 598,-435.36 604,-435.36 604,-435.36 781.6,-435.36 781.6,-435.36 787.6,-435.36 793.6,-441.36 793.6,-447.36 793.6,-447.36 793.6,-504.04 793.6,-504.04 793.6,-510.04 787.6,-516.04 781.6,-516.04"/>
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="692.8" y="-489.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch4_sec3_obj1</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="692.8" y="-464.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Describe the structure of</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="692.8" y="-452.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">eukaryotic cells</text>
+</g></g>
 <!-- ch4_sec3_obj1&#45;&gt;ch10_sec1_obj1 -->
 <g id="edge____ch4_sec3_obj1___ch10_sec1_obj1" class="edge">
 <title>ch4_sec3_obj1&#45;&gt;ch10_sec1_obj1</title>
@@ -298,12 +327,17 @@
 <!-- ch10_sec1_obj2 -->
 <g id="ch10_sec1_obj2" class="node">
 <title>ch10_sec1_obj2</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M1077.6,-307.36C1077.6,-307.36 900,-307.36 900,-307.36 894,-307.36 888,-301.36 888,-295.36 888,-295.36 888,-226.68 888,-226.68 888,-220.68 894,-214.68 900,-214.68 900,-214.68 1077.6,-214.68 1077.6,-214.68 1083.6,-214.68 1089.6,-220.68 1089.6,-226.68 1089.6,-226.68 1089.6,-295.36 1089.6,-295.36 1089.6,-301.36 1083.6,-307.36 1077.6,-307.36"/>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-281.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch10_sec1_obj2</text>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-256.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Distinguish between</text>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-244.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">chromosomes, genes, and</text>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-232.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">traits</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M1077.6,-307.36C1077.6,-307.36 900,-307.36 900,-307.36 894,-307.36 888,-301.36 888,-295.36 888,-295.36 888,-226.68 888,-226.68 888,-220.68 894,-214.68 900,-214.68 900,-214.68 1077.6,-214.68 1077.6,-214.68 1083.6,-214.68 1089.6,-220.68 1089.6,-226.68 1089.6,-226.68 1089.6,-295.36 1089.6,-295.36 1089.6,-301.36 1083.6,-307.36 1077.6,-307.36"/>
+
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-281.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch10_sec1_obj2</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-256.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Distinguish between</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-244.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">chromosomes, genes, and</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-232.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">traits</text>
+</g></g>
 <!-- ch4_sec3_obj1&#45;&gt;ch10_sec1_obj2 -->
 <g id="edge____ch4_sec3_obj1___ch10_sec1_obj2" class="edge">
 <title>ch4_sec3_obj1&#45;&gt;ch10_sec1_obj2</title>
@@ -313,11 +347,15 @@
 <!-- ch10_sec1_obj3 -->
 <g id="ch10_sec1_obj3" class="node">
 <title>ch10_sec1_obj3</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M1373.6,-301.36C1373.6,-301.36 1196,-301.36 1196,-301.36 1190,-301.36 1184,-295.36 1184,-289.36 1184,-289.36 1184,-232.68 1184,-232.68 1184,-226.68 1190,-220.68 1196,-220.68 1196,-220.68 1373.6,-220.68 1373.6,-220.68 1379.6,-220.68 1385.6,-226.68 1385.6,-232.68 1385.6,-232.68 1385.6,-289.36 1385.6,-289.36 1385.6,-295.36 1379.6,-301.36 1373.6,-301.36"/>
-<text xml:space="preserve" text-anchor="middle" x="1284.8" y="-275.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch10_sec1_obj3</text>
-<text xml:space="preserve" text-anchor="middle" x="1284.8" y="-250.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Describe the mechanisms of</text>
-<text xml:space="preserve" text-anchor="middle" x="1284.8" y="-238.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">chromosome compaction</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M1373.6,-301.36C1373.6,-301.36 1196,-301.36 1196,-301.36 1190,-301.36 1184,-295.36 1184,-289.36 1184,-289.36 1184,-232.68 1184,-232.68 1184,-226.68 1190,-220.68 1196,-220.68 1196,-220.68 1373.6,-220.68 1373.6,-220.68 1379.6,-220.68 1385.6,-226.68 1385.6,-232.68 1385.6,-232.68 1385.6,-289.36 1385.6,-289.36 1385.6,-295.36 1379.6,-301.36 1373.6,-301.36"/>
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1284.8" y="-275.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch10_sec1_obj3</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1284.8" y="-250.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Describe the mechanisms of</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1284.8" y="-238.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">chromosome compaction</text>
+</g></g>
 <!-- ch4_sec3_obj1&#45;&gt;ch10_sec1_obj3 -->
 <g id="edge____ch4_sec3_obj1___ch10_sec1_obj3" class="edge">
 <title>ch4_sec3_obj1&#45;&gt;ch10_sec1_obj3</title>
@@ -327,11 +365,15 @@
 <!-- ch4_sec3_obj2 -->
 <g id="ch4_sec3_obj2" class="node">
 <title>ch4_sec3_obj2</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M485.6,-516.04C485.6,-516.04 308,-516.04 308,-516.04 302,-516.04 296,-510.04 296,-504.04 296,-504.04 296,-447.36 296,-447.36 296,-441.36 302,-435.36 308,-435.36 308,-435.36 485.6,-435.36 485.6,-435.36 491.6,-435.36 497.6,-441.36 497.6,-447.36 497.6,-447.36 497.6,-504.04 497.6,-504.04 497.6,-510.04 491.6,-516.04 485.6,-516.04"/>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-489.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch4_sec3_obj2</text>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-464.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Compare animal cells with</text>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-452.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">plant cells</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M485.6,-516.04C485.6,-516.04 308,-516.04 308,-516.04 302,-516.04 296,-510.04 296,-504.04 296,-504.04 296,-447.36 296,-447.36 296,-441.36 302,-435.36 308,-435.36 308,-435.36 485.6,-435.36 485.6,-435.36 491.6,-435.36 497.6,-441.36 497.6,-447.36 497.6,-447.36 497.6,-504.04 497.6,-504.04 497.6,-510.04 491.6,-516.04 485.6,-516.04"/>
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-489.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch4_sec3_obj2</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-464.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Compare animal cells with</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-452.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">plant cells</text>
+</g></g>
 <!-- ch4_sec3_obj2&#45;&gt;ch10_sec1_obj1 -->
 <g id="edge____ch4_sec3_obj2___ch10_sec1_obj1" class="edge">
 <title>ch4_sec3_obj2&#45;&gt;ch10_sec1_obj1</title>
@@ -341,11 +383,15 @@
 <!-- ch3_sec5_obj2 -->
 <g id="ch3_sec5_obj2" class="node">
 <title>ch3_sec5_obj2</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M1077.6,-516.04C1077.6,-516.04 900,-516.04 900,-516.04 894,-516.04 888,-510.04 888,-504.04 888,-504.04 888,-447.36 888,-447.36 888,-441.36 894,-435.36 900,-435.36 900,-435.36 1077.6,-435.36 1077.6,-435.36 1083.6,-435.36 1089.6,-441.36 1089.6,-447.36 1089.6,-447.36 1089.6,-504.04 1089.6,-504.04 1089.6,-510.04 1083.6,-516.04 1077.6,-516.04"/>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-489.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch3_sec5_obj2</text>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-464.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Explain DNA&#39;s structure</text>
-<text xml:space="preserve" text-anchor="middle" x="988.8" y="-452.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">and role</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M1077.6,-516.04C1077.6,-516.04 900,-516.04 900,-516.04 894,-516.04 888,-510.04 888,-504.04 888,-504.04 888,-447.36 888,-447.36 888,-441.36 894,-435.36 900,-435.36 900,-435.36 1077.6,-435.36 1077.6,-435.36 1083.6,-435.36 1089.6,-441.36 1089.6,-447.36 1089.6,-447.36 1089.6,-504.04 1089.6,-504.04 1089.6,-510.04 1083.6,-516.04 1077.6,-516.04"/>
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-489.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch3_sec5_obj2</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-464.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Explain DNA&#39;s structure</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="988.8" y="-452.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">and role</text>
+</g></g>
 <!-- ch3_sec5_obj2&#45;&gt;ch10_sec1_obj1 -->
 <g id="edge____ch3_sec5_obj2___ch10_sec1_obj1" class="edge">
 <title>ch3_sec5_obj2&#45;&gt;ch10_sec1_obj1</title>
@@ -367,12 +413,17 @@
 <!-- ch3_sec5_obj1 -->
 <g id="ch3_sec5_obj1" class="node">
 <title>ch3_sec5_obj1</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M1373.6,-522.04C1373.6,-522.04 1196,-522.04 1196,-522.04 1190,-522.04 1184,-516.04 1184,-510.04 1184,-510.04 1184,-441.36 1184,-441.36 1184,-435.36 1190,-429.36 1196,-429.36 1196,-429.36 1373.6,-429.36 1373.6,-429.36 1379.6,-429.36 1385.6,-435.36 1385.6,-441.36 1385.6,-441.36 1385.6,-510.04 1385.6,-510.04 1385.6,-516.04 1379.6,-522.04 1373.6,-522.04"/>
-<text xml:space="preserve" text-anchor="middle" x="1284.8" y="-495.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch3_sec5_obj1</text>
-<text xml:space="preserve" text-anchor="middle" x="1284.8" y="-470.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Describe nucleic acids&#39;</text>
-<text xml:space="preserve" text-anchor="middle" x="1284.8" y="-458.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">structure and define the</text>
-<text xml:space="preserve" text-anchor="middle" x="1284.8" y="-446.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">two types</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M1373.6,-522.04C1373.6,-522.04 1196,-522.04 1196,-522.04 1190,-522.04 1184,-516.04 1184,-510.04 1184,-510.04 1184,-441.36 1184,-441.36 1184,-435.36 1190,-429.36 1196,-429.36 1196,-429.36 1373.6,-429.36 1373.6,-429.36 1379.6,-429.36 1385.6,-435.36 1385.6,-441.36 1385.6,-441.36 1385.6,-510.04 1385.6,-510.04 1385.6,-516.04 1379.6,-522.04 1373.6,-522.04"/>
+
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1284.8" y="-495.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch3_sec5_obj1</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1284.8" y="-470.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Describe nucleic acids&#39;</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1284.8" y="-458.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">structure and define the</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1284.8" y="-446.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">two types</text>
+</g></g>
 <!-- ch3_sec5_obj1&#45;&gt;ch10_sec1_obj1 -->
 <g id="edge____ch3_sec5_obj1___ch10_sec1_obj1" class="edge">
 <title>ch3_sec5_obj1&#45;&gt;ch10_sec1_obj1</title>
@@ -400,11 +451,15 @@
 <!-- ch4_sec3_obj4 -->
 <g id="ch4_sec3_obj4" class="node">
 <title>ch4_sec3_obj4</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M1669.6,-516.04C1669.6,-516.04 1492,-516.04 1492,-516.04 1486,-516.04 1480,-510.04 1480,-504.04 1480,-504.04 1480,-447.36 1480,-447.36 1480,-441.36 1486,-435.36 1492,-435.36 1492,-435.36 1669.6,-435.36 1669.6,-435.36 1675.6,-435.36 1681.6,-441.36 1681.6,-447.36 1681.6,-447.36 1681.6,-504.04 1681.6,-504.04 1681.6,-510.04 1675.6,-516.04 1669.6,-516.04"/>
-<text xml:space="preserve" text-anchor="middle" x="1580.8" y="-489.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch4_sec3_obj4</text>
-<text xml:space="preserve" text-anchor="middle" x="1580.8" y="-464.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Summarize the functions of</text>
-<text xml:space="preserve" text-anchor="middle" x="1580.8" y="-452.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">the major cell organelles</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M1669.6,-516.04C1669.6,-516.04 1492,-516.04 1492,-516.04 1486,-516.04 1480,-510.04 1480,-504.04 1480,-504.04 1480,-447.36 1480,-447.36 1480,-441.36 1486,-435.36 1492,-435.36 1492,-435.36 1669.6,-435.36 1669.6,-435.36 1675.6,-435.36 1681.6,-441.36 1681.6,-447.36 1681.6,-447.36 1681.6,-504.04 1681.6,-504.04 1681.6,-510.04 1675.6,-516.04 1669.6,-516.04"/>
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1580.8" y="-489.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch4_sec3_obj4</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1580.8" y="-464.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Summarize the functions of</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="1580.8" y="-452.75" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">the major cell organelles</text>
+</g></g>
 <!-- ch4_sec3_obj4&#45;&gt;ch10_sec1_obj2 -->
 <g id="edge____ch4_sec3_obj4___ch10_sec1_obj2" class="edge">
 <title>ch4_sec3_obj4&#45;&gt;ch10_sec1_obj2</title>
@@ -426,12 +481,17 @@
 <!-- ch6_sec4_obj2 -->
 <g id="ch6_sec4_obj2" class="node">
 <title>ch6_sec4_obj2</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M485.6,-307.36C485.6,-307.36 308,-307.36 308,-307.36 302,-307.36 296,-301.36 296,-295.36 296,-295.36 296,-226.68 296,-226.68 296,-220.68 302,-214.68 308,-214.68 308,-214.68 485.6,-214.68 485.6,-214.68 491.6,-214.68 497.6,-220.68 497.6,-226.68 497.6,-226.68 497.6,-295.36 497.6,-295.36 497.6,-301.36 491.6,-307.36 485.6,-307.36"/>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-281.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch6_sec4_obj2</text>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-256.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Describe how energy</text>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-244.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">releases through ATP</text>
-<text xml:space="preserve" text-anchor="middle" x="396.8" y="-232.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">hydrolysis</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M485.6,-307.36C485.6,-307.36 308,-307.36 308,-307.36 302,-307.36 296,-301.36 296,-295.36 296,-295.36 296,-226.68 296,-226.68 296,-220.68 302,-214.68 308,-214.68 308,-214.68 485.6,-214.68 485.6,-214.68 491.6,-214.68 497.6,-220.68 497.6,-226.68 497.6,-226.68 497.6,-295.36 497.6,-295.36 497.6,-301.36 491.6,-307.36 485.6,-307.36"/>
+
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-281.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch6_sec4_obj2</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-256.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Describe how energy</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-244.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">releases through ATP</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="396.8" y="-232.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">hydrolysis</text>
+</g></g>
 <!-- ch6_sec4_obj2&#45;&gt;ch10_sec2_obj1 -->
 <g id="edge____ch6_sec4_obj2___ch10_sec2_obj1" class="edge">
 <title>ch6_sec4_obj2&#45;&gt;ch10_sec2_obj1</title>
@@ -441,11 +501,15 @@
 <!-- ch6_sec4_obj1 -->
 <g id="ch6_sec4_obj1" class="node">
 <title>ch6_sec4_obj1</title>
-<path fill="#e3f2fd" stroke="#1e88e5" d="M189.6,-301.36C189.6,-301.36 12,-301.36 12,-301.36 6,-301.36 0,-295.36 0,-289.36 0,-289.36 0,-232.68 0,-232.68 0,-226.68 6,-220.68 12,-220.68 12,-220.68 189.6,-220.68 189.6,-220.68 195.6,-220.68 201.6,-226.68 201.6,-232.68 201.6,-232.68 201.6,-289.36 201.6,-289.36 201.6,-295.36 195.6,-301.36 189.6,-301.36"/>
-<text xml:space="preserve" text-anchor="middle" x="100.8" y="-275.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">ch6_sec4_obj1</text>
-<text xml:space="preserve" text-anchor="middle" x="100.8" y="-250.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">Explain ATP&#39;s role as the</text>
-<text xml:space="preserve" text-anchor="middle" x="100.8" y="-238.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#0d47a1">cellular energy currency</text>
-</g>
+<path style=\"transform: scale(1.15); transform-origin: center; transform-box: fill-box;\" fill="#e3f2fd" stroke="#1e88e5" d="M189.6,-301.36C189.6,-301.36 12,-301.36 12,-301.36 6,-301.36 0,-295.36 0,-289.36 0,-289.36 0,-232.68 0,-232.68 0,-226.68 6,-220.68 12,-220.68 12,-220.68 189.6,-220.68 189.6,-220.68 195.6,-220.68 201.6,-226.68 201.6,-232.68 201.6,-232.68 201.6,-289.36 201.6,-289.36 201.6,-295.36 195.6,-301.36 189.6,-301.36"/>
+
+
+
+<g style="transform: scale(1.30); transform-origin: center; transform-box: fill-box;">
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="100.8" y="-275.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">ch6_sec4_obj1</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="100.8" y="-250.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">Explain ATP&#39;s role as the</text>
+<text font-weight="bold" xml:space="preserve" text-anchor="middle" x="100.8" y="-238.07" font-family="Helvetica,Arial,sans-serif" font-size="11.00" fill="#000000">cellular energy currency</text>
+</g></g>
 <!-- ch6_sec4_obj1&#45;&gt;ch10_sec2_obj1 -->
 <g id="edge____ch6_sec4_obj1___ch10_sec2_obj1" class="edge">
 <title>ch6_sec4_obj1&#45;&gt;ch10_sec2_obj1</title>
@@ -487,191 +551,204 @@
     <script>
         var nodeRegistry = {"ch10_sec1_obj1": {"id": "ch10_sec1_obj1", "text": "Describe the structure of prokaryotic and eukaryotic genomes", "prereqs": ["ch4_sec3_obj1", "ch4_sec3_obj2", "ch3_sec5_obj2", "ch3_sec5_obj1"]}, "ch4_sec3_obj1": {"id": "ch4_sec3_obj1", "text": "Describe the structure of eukaryotic cells", "prereqs": []}, "ch4_sec3_obj2": {"id": "ch4_sec3_obj2", "text": "Compare animal cells with plant cells", "prereqs": []}, "ch3_sec5_obj2": {"id": "ch3_sec5_obj2", "text": "Explain DNA's structure and role", "prereqs": []}, "ch3_sec5_obj1": {"id": "ch3_sec5_obj1", "text": "Describe nucleic acids' structure and define the two types", "prereqs": []}, "ch10_sec1_obj2": {"id": "ch10_sec1_obj2", "text": "Distinguish between chromosomes, genes, and traits", "prereqs": ["ch4_sec3_obj4", "ch4_sec3_obj1", "ch3_sec5_obj2", "ch3_sec5_obj1"]}, "ch4_sec3_obj4": {"id": "ch4_sec3_obj4", "text": "Summarize the functions of the major cell organelles", "prereqs": []}, "ch10_sec1_obj3": {"id": "ch10_sec1_obj3", "text": "Describe the mechanisms of chromosome compaction", "prereqs": ["ch4_sec3_obj4", "ch4_sec3_obj1", "ch3_sec5_obj2", "ch3_sec5_obj1"]}, "ch10_sec2_obj1": {"id": "ch10_sec2_obj1", "text": "Describe the three stages of interphase", "prereqs": ["ch10_sec1_obj1", "ch6_sec4_obj2", "ch6_sec4_obj1"]}, "ch6_sec4_obj2": {"id": "ch6_sec4_obj2", "text": "Describe how energy releases through ATP hydrolysis", "prereqs": []}, "ch6_sec4_obj1": {"id": "ch6_sec4_obj1", "text": "Explain ATP's role as the cellular energy currency", "prereqs": []}, "ch10_sec2_obj2": {"id": "ch10_sec2_obj2", "text": "Discuss the behavior of chromosomes during karyokinesis/mitosis", "prereqs": ["ch10_sec1_obj1", "ch10_sec1_obj3", "ch10_sec1_obj2"]}};
 
-        var initInterval = setInterval(function() {
-            if (typeof svgPanZoom === 'undefined') return;
-            clearInterval(initInterval);
-
-            var panZoomInstance = svgPanZoom('#interactive-svg', {
-                zoomEnabled: true,
-                controlIconsEnabled: false,
-                fit: true,
-                center: true,
-                minZoom: 0.1,
-                maxZoom: 5,
-                zoomScaleFactor: 0.12
-            });
-
-            var svgElement = document.getElementById('interactive-svg');
-            var nodes = svgElement.querySelectorAll('.node');
+        
             
-            // Build edge registry by finding all edge groups and their child elements
-            var edgeRegistry = [];
-            var allGroups = svgElement.querySelectorAll('g');
-            
-            for (var i = 0; i < allGroups.length; i++) {
-                var group = allGroups[i];
-                var groupId = group.getAttribute('id') || '';
+            var panZoomInstance = null;
+            var isInitialized = false;
+
+            function initGraphInteractions() {
+                if (isInitialized) return;
                 
-                if (groupId.startsWith('edge____')) {
-                    // Extract source and target from ID
-                    var parts = groupId.replace('edge____', '').split('___');
-                    if (parts.length === 2) {
-                        var sourceId = parts[0];
-                        var targetId = parts[1];
-                        
-                        // Find the path and polygon within this group
-                        var path = group.querySelector('path');
-                        var polygon = group.querySelector('polygon');
-                        
-                        if (path || polygon) {
+                var svgElement = document.getElementById("interactive-svg");
+                if (!svgElement) return;
+
+                try {
+                    panZoomInstance = svgPanZoom("#interactive-svg", {
+                        zoomEnabled: true,
+                        controlIconsEnabled: true,
+                        fit: true,
+                        center: true,
+                        minZoom: 0.1,
+                        maxZoom: 5,
+                        zoomScaleFactor: 0.12
+                    });
+                } catch (e) {
+                    console.warn("svgPanZoom failed (likely 0x0 container). Waiting for resize...");
+                    return;
+                }
+
+                isInitialized = true;
+                
+                var resetBtn = document.getElementById("reset-view-btn");
+                if (resetBtn) {
+                    resetBtn.addEventListener("click", function() {
+                        if (panZoomInstance) {
+                            panZoomInstance.resize();
+                            panZoomInstance.fit();
+                            panZoomInstance.center();
+                        }
+                    });
+                }
+
+                var nodes = svgElement.querySelectorAll(".node");
+                var edgeRegistry = [];
+                var allGroups = svgElement.querySelectorAll("g");
+                
+                for (var i = 0; i < allGroups.length; i++) {
+                    var group = allGroups[i];
+                    var groupId = group.getAttribute("id") || "";
+                    if (groupId.startsWith("edge____")) {
+                        var parts = groupId.replace("edge____", "").split("___");
+                        if (parts.length === 2) {
                             edgeRegistry.push({
-                                group: group,
-                                source: sourceId,
-                                target: targetId,
-                                path: path,
-                                polygon: polygon
+                                id: groupId,
+                                source: parts[0],
+                                target: parts[1],
+                                element: group
                             });
                         }
                     }
                 }
-            }
 
-            // Function to reset all highlights
-            function resetHighlights() {
-                // Reset edges
-                for (var i = 0; i < edgeRegistry.length; i++) {
-                    var edge = edgeRegistry[i];
-                    edge.group.classList.remove('edge-incoming', 'edge-outgoing');
-                    if (edge.path) {
-                        edge.path.setAttribute('stroke', '#CBD5E1');
-                        edge.path.setAttribute('stroke-width', '2');
-                    }
-                    if (edge.polygon) {
-                        edge.polygon.setAttribute('stroke', '#CBD5E1');
-                        edge.polygon.setAttribute('fill', '#CBD5E1');
-                    }
+                function resetHighlights() {
+                    nodes.forEach(function(n) {
+                        n.style.opacity = "1";
+                        var path = n.querySelector("path, polygon, ellipse");
+                        if (path) path.setAttribute("stroke", "#000000");
+                    });
+                    edgeRegistry.forEach(function(edge) {
+                        edge.element.style.opacity = "1";
+                        var path = edge.element.querySelector("path");
+                        if (path) path.setAttribute("stroke", "#000000");
+                    });
                 }
-                
-                // Reset nodes
-                for (var i = 0; i < nodes.length; i++) {
-                    var polygon = nodes[i].querySelector('polygon');
-                    if (polygon) {
-                        polygon.setAttribute('fill', '#E3F2FD');
-                        polygon.setAttribute('stroke', '#1E88E5');
-                        nodes[i].classList.remove('node-highlight');
-                    }
-                }
-            }
 
-            // Click handler for nodes
-            for (var i = 0; i < nodes.length; i++) {
-                nodes[i].addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    
-                    var target = e.currentTarget;
-                    var selectedId = target.getAttribute('id');
-                    if (!selectedId) return;
-                    
-                    var nodeData = nodeRegistry[selectedId];
-                    if (!nodeData) return;
+                nodes.forEach(function(node) {
+                    node.addEventListener("click", function(e) {
+                        e.stopPropagation();
+                        var nodeId = this.getAttribute("id") || "";
+                        if (nodeId.startsWith("node____")) {
+                            nodeId = nodeId.replace("node____", "");
+                        }
 
-                    // Count connections
-                    var incomingCount = 0;
-                    var outgoingCount = 0;
-                    for (var j = 0; j < edgeRegistry.length; j++) {
-                        if (edgeRegistry[j].target === selectedId) incomingCount++;
-                        if (edgeRegistry[j].source === selectedId) outgoingCount++;
-                    }
+                        document.getElementById("placeholder").style.display = "none";
+                        document.getElementById("content-view").style.display = "block";
 
-                    // 1. Sidebar Populates
-                    document.getElementById('placeholder').style.display = 'none';
-                    document.getElementById('content-view').style.display = 'flex';
-                    document.getElementById('node-id-view').innerText = nodeData.id;
-                    document.getElementById('node-text-view').innerText = nodeData.text;
-                    document.getElementById('incoming-count').innerText = incomingCount;
-                    document.getElementById('outgoing-count').innerText = outgoingCount;
-                    
-                    var pContainer = document.getElementById('prereqs-container-view');
-                    pContainer.innerHTML = '';
-                    
-                    if (nodeData.prereqs.length === 0) {
-                        pContainer.innerHTML = '<div class="no-prereqs">This is a foundational concept with no prerequisites</div>';
-                    } else {
-                        nodeData.prereqs.forEach(function(pId) {
-                            var pMetadata = nodeRegistry[pId];
-                            var pText = pMetadata ? pMetadata.text : "Prerequisite details";
-                            var pill = document.createElement('div');
-                            pill.className = 'prereq-pill';
-                            pill.innerHTML = '<span class="pill-id">' + pId + '</span><span class="pill-text">' + pText + '</span>';
-                            pContainer.appendChild(pill);
-                        });
-                    }
-
-                    // 2. Reset all highlights
-                    resetHighlights();
-
-                    // 3. Highlight the selected node
-                    target.classList.add('node-highlight');
-
-                    // 4. Highlight edges with beautiful colors
-                    for (var j = 0; j < edgeRegistry.length; j++) {
-                        var edge = edgeRegistry[j];
-                        
-                        if (edge.target === selectedId) {
-                            // Incoming edge (prerequisite) - Warm Amber
-                            edge.group.classList.add('edge-incoming');
-                            if (edge.path) {
-                                edge.path.setAttribute('stroke', '#F59E0B');
-                                edge.path.setAttribute('stroke-width', '4');
-                            }
-                            if (edge.polygon) {
-                                edge.polygon.setAttribute('stroke', '#F59E0B');
-                                edge.polygon.setAttribute('fill', '#F59E0B');
-                            }
-                        } else if (edge.source === selectedId) {
-                            // Outgoing edge (dependent) - Vibrant Purple
-                            edge.group.classList.add('edge-outgoing');
-                            if (edge.path) {
-                                edge.path.setAttribute('stroke', '#8B5CF6');
-                                edge.path.setAttribute('stroke-width', '4');
-                            }
-                            if (edge.polygon) {
-                                edge.polygon.setAttribute('stroke', '#8B5CF6');
-                                edge.polygon.setAttribute('fill', '#8B5CF6');
+                        var data = nodeRegistry[nodeId];
+                        if (data) {
+                            document.getElementById("node-id-view").textContent = data.id;
+                            document.getElementById("node-text-view").textContent = data.text;
+                            var prereqsContainer = document.getElementById("prereqs-container-view");
+                            prereqsContainer.innerHTML = "";
+                            if (data.prereqs && data.prereqs.length > 0) {
+                                data.prereqs.forEach(function(pr) {
+                                    var el = document.createElement("div");
+                                    el.className = "prereq-item";
+                                    el.textContent = pr;
+                                    prereqsContainer.appendChild(el);
+                                });
+                            } else {
+                                var el = document.createElement("div");
+                                el.className = "prereq-item";
+                                el.style.background = "#f1f5f9";
+                                el.style.borderLeft = "4px solid #94a3b8";
+                                el.textContent = "None";
+                                prereqsContainer.appendChild(el);
                             }
                         }
-                        // All other edges remain unchanged (no fade)
+
+                        resetHighlights();
+
+                        var path = this.querySelector("path, polygon, ellipse");
+                        if (path) path.setAttribute("stroke", "#2563eb");
+
+                        var incoming = 0;
+                        var outgoing = 0;
+
+                        edgeRegistry.forEach(function(edge) {
+                            if (edge.source === nodeId || edge.target === nodeId) {
+                                edge.element.style.opacity = "1";
+                                var ePath = edge.element.querySelector("path");
+                                if (ePath) {
+                                    if (edge.source === nodeId) {
+                                        ePath.setAttribute("stroke", "#9333ea");
+                                        outgoing++;
+                                    } else {
+                                        ePath.setAttribute("stroke", "#d97706");
+                                        incoming++;
+                                    }
+                                }
+                            } else {
+                                edge.element.style.opacity = "0.2";
+                            }
+                        });
+
+                        nodes.forEach(function(n) {
+                            var nId = n.getAttribute("id") || "";
+                            if (nId.startsWith("node____")) nId = nId.replace("node____", "");
+                            if (nId !== nodeId) {
+                                var connected = edgeRegistry.some(function(edge) {
+                                    return (edge.source === nodeId && edge.target === nId) ||
+                                           (edge.target === nodeId && edge.source === nId);
+                                });
+                                if (!connected) {
+                                    n.style.opacity = "0.2";
+                                }
+                            }
+                        });
+
+                        document.getElementById("incoming-count").textContent = incoming;
+                        document.getElementById("outgoing-count").textContent = outgoing;
+                    });
+                });
+
+                svgElement.addEventListener("click", function(e) {
+                    if (e.target === svgElement || e.target.tagName === "svg" || e.target.id === "graph0") {
+                        resetHighlights();
+                        document.getElementById("placeholder").style.display = "block";
+                        document.getElementById("content-view").style.display = "none";
                     }
                 });
             }
 
-            // Click on background to reset
-            svgElement.addEventListener('click', function(e) {
-                if (e.target === svgElement || e.target.tagName === 'svg' || e.target.id === 'graph0') {
-                    resetHighlights();
-                    document.getElementById('placeholder').style.display = 'block';
-                    document.getElementById('content-view').style.display = 'none';
+            var ro = new ResizeObserver(function(entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    var entry = entries[i];
+                    if (entry.contentRect.width > 0 && entry.contentRect.height > 0) {
+                        if (!isInitialized) {
+                            initGraphInteractions();
+                        }
+                        if (panZoomInstance) {
+                            panZoomInstance.resize();
+                            panZoomInstance.fit();
+                            panZoomInstance.center();
+                        }
+                    }
                 }
             });
-
-            window.addEventListener('resize', function() {
-                panZoomInstance.resize();
-                panZoomInstance.fit();
-                panZoomInstance.center();
-            });
-        }, 100);
-    </script>
-    <script>
-        // Ensure all nodes are drawn on top of edges so arrows don't bleed into boxes and intercept clicks
-        var reorderInterval = setInterval(function() {
-            var allNodes = document.querySelectorAll('.node');
-            if (allNodes.length > 0) {
-                clearInterval(reorderInterval);
-                allNodes.forEach(function(n) {
-                    if(n.parentNode) n.parentNode.appendChild(n);
-                });
+            
+            var container = document.querySelector(".graph-container");
+            if (container) {
+                ro.observe(container);
             }
-        }, 100);
+
+    </script>
+
+
+    <script>
+        // Ensure all nodes are drawn on top of edges so arrows don't bleed into boxes
+        document.addEventListener("DOMContentLoaded", function() {
+            var allNodes = document.querySelectorAll('.node');
+            allNodes.forEach(function(n) {
+                if(n.parentNode) n.parentNode.appendChild(n);
+            });
+        });
+        // Also run immediately just in case
+        var allNodes = document.querySelectorAll('.node');
+        allNodes.forEach(function(n) {
+            if(n.parentNode) n.parentNode.appendChild(n);
+        });
     </script>
 </body>
+
 </html>
