@@ -317,6 +317,42 @@ PREREQ_LO_MAP = {
 
 # Prereq questions from ch3, ch4, ch6 — verified against textbook_questions_with_answers.json
 PREREQ_QUESTIONS = {
+    "ch10_sec1_obj1": {
+        "id":      "bio-ch10-rq-001",
+        "lo_desc": "Describe the structure of prokaryotic and eukaryotic genomes",
+        "ch": 10, "sec": "10.1",
+        "text": "Which of the following is a key characteristic of a eukaryotic genome?",
+        "options": [
+            "It consists of a single, circular DNA molecule.",
+            "It is composed of multiple linear chromosomes inside a nucleus.",
+            "It floats freely in the cytoplasm without a membrane.",
+            "It lacks any associated structural proteins."
+        ],
+    },
+    "ch10_sec1_obj2": {
+        "id":      "bio-ch10-rq-002",
+        "lo_desc": "Distinguish between chromosomes, genes, and traits",
+        "ch": 10, "sec": "10.1",
+        "text": "Which of the following best describes the relationship between a gene and a trait?",
+        "options": [
+            "A trait is a sequence of DNA that codes for a specific gene.",
+            "Genes are physical characteristics inherited directly from parents.",
+            "A gene is a specific segment of DNA that codes for proteins determining a specific trait.",
+            "Chromosomes are made of traits which are coded by floating genes."
+        ],
+    },
+    "ch10_sec1_obj3": {
+        "id":      "bio-ch10-rq-003",
+        "lo_desc": "Describe the mechanisms of chromosome compaction",
+        "ch": 10, "sec": "10.1",
+        "text": "What is the primary role of histone proteins in a eukaryotic cell?",
+        "options": [
+            "To replicate DNA during the S phase.",
+            "To act as spools around which DNA wraps to compact into nucleosomes.",
+            "To break down damaged chromosomes during mitosis.",
+            "To transport chromosomes to opposite poles of the cell."
+        ],
+    },
     "ch4_sec3_obj1": {
         "id":      "bio-ch04-rq-008",
         "lo_desc": "Describe the structure and characteristics of prokaryotic and eukaryotic cells",
