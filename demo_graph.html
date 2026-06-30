@@ -661,6 +661,17 @@
             });
         }, 100);
     </script>
-
+    <script>
+        // Ensure all nodes are drawn on top of edges so arrows don't bleed into boxes and intercept clicks
+        var reorderInterval = setInterval(function() {
+            var allNodes = document.querySelectorAll('.node');
+            if (allNodes.length > 0) {
+                clearInterval(reorderInterval);
+                allNodes.forEach(function(n) {
+                    if(n.parentNode) n.parentNode.appendChild(n);
+                });
+            }
+        }, 100);
+    </script>
 </body>
 </html>
