@@ -900,20 +900,37 @@ with home_tab:
     # PHASE 2.5 — ANIMATION WAIT STATE
     # ────────────────────────────────────────────────────────────────────────
     elif st.session_state.phase == "anim":
-        # The visible button is rendered directly in the HTML overlay above.
-        # This hidden Streamlit button catches the JS click event to trigger the state change.
+        # Force the Streamlit button to float above the full-screen overlay
         st.markdown("""
         <style>
-            div[data-testid="stMain"] div[data-testid="stButton"] {
-                opacity: 0 !important;
-                position: absolute !important;
-                z-index: -100 !important;
-                pointer-events: none !important;
+            div[data-testid="stButton"] {
+                position: fixed !important;
+                bottom: 30px !important;
+                right: 30px !important;
+                z-index: 9999999 !important;
+                animation: ecFadeInBtn 0.5s ease 3s forwards;
+                opacity: 0;
             }
+            div[data-testid="stButton"] button {
+                padding: 16px 32px !important;
+                font-size: 18px !important;
+                font-weight: 800 !important;
+                background-color: #4f46e5 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 12px !important;
+                cursor: pointer !important;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
+            }
+            div[data-testid="stButton"] button p {
+                font-size: 18px !important;
+                font-weight: 800 !important;
+            }
+            @keyframes ecFadeInBtn { to { opacity: 1; } }
         </style>
         """, unsafe_allow_html=True)
         
-        if st.button("HIDDEN_TRIGGER", use_container_width=False):
+        if st.button("View Results →", use_container_width=False):
             st.session_state.phase = "results"
             st.rerun()
 
@@ -922,8 +939,20 @@ with home_tab:
     # ────────────────────────────────────────────────────────────────────────
     elif st.session_state.phase == "results":
         import streamlit.components.v1 as components
-        components.html('''<script>window.parent.document.querySelector(".main").scrollTo(0,0);</script>''', height=0)
-
+        components.html('''
+            <script>
+                (function() {
+                    var doc = window.parent.document;
+                    var anchor = doc.getElementById('ec-top-anchor');
+                    if (anchor) {
+                        var scrollInterval = setInterval(function() {
+                            anchor.scrollIntoView({behavior: "instant", block: "start"});
+                        }, 100);
+                        setTimeout(function() { clearInterval(scrollInterval); }, 3000);
+                    }
+                })();
+            </script>
+        ''', height=0)
         
 
 
