@@ -945,10 +945,9 @@ with home_tab:
                     var doc = window.parent.document;
                     var anchor = doc.getElementById('ec-top-anchor');
                     if (anchor) {
-                        var scrollInterval = setInterval(function() {
-                            anchor.scrollIntoView({behavior: "instant", block: "start"});
-                        }, 100);
-                        setTimeout(function() { clearInterval(scrollInterval); }, 3000);
+                        anchor.scrollIntoView({behavior: "instant", block: "start"});
+                        setTimeout(function() { anchor.scrollIntoView({behavior: "instant", block: "start"}); }, 150);
+                        setTimeout(function() { anchor.scrollIntoView({behavior: "instant", block: "start"}); }, 400);
                     }
                 })();
             </script>
