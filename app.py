@@ -904,7 +904,7 @@ with home_tab:
         # Render a beautiful native Streamlit button that works perfectly on Cloud
         st.markdown("""
         <style>
-            div[data-testid="stMain"] div[data-testid="stButton"] {
+            div[data-testid="stButton"] {
                 position: fixed !important;
                 bottom: 30px !important;
                 right: 30px !important;
@@ -913,7 +913,7 @@ with home_tab:
                 animation: ecFadeInBtn 0.5s ease 3s forwards;
                 opacity: 0;
             }
-            div[data-testid="stMain"] div[data-testid="stButton"] button {
+            div[data-testid="stButton"] button {
                 padding: 16px 32px !important;
                 font-size: 18px !important;
                 font-weight: 800 !important;
@@ -928,7 +928,7 @@ with home_tab:
                 line-height: normal !important;
                 min-height: 0 !important;
             }
-            div[data-testid="stMain"] div[data-testid="stButton"] button p {
+            div[data-testid="stButton"] button p {
                 font-size: 18px !important;
                 font-weight: 800 !important;
                 color: white !important;
