@@ -938,6 +938,8 @@ with home_tab:
     # PHASE 3 — RESULTS
     # ────────────────────────────────────────────────────────────────────────
     elif st.session_state.phase == "results":
+        import streamlit.components.v1 as components
+        components.html('''<script>window.parent.document.querySelector(".main").scrollTo(0,0);</script>''', height=0)
 
         
 
