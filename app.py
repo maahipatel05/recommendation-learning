@@ -949,6 +949,18 @@ with home_tab:
         import streamlit.components.v1 as components
         components.html('''
             <script>
+                var doc = window.parent.document;
+                var overlay = doc.getElementById('ec-overlay');
+                if (overlay) {
+                    overlay.style.opacity = '0';
+                    setTimeout(function() { overlay.remove(); }, 300);
+                }
+            </script>
+        ''', height=0)
+
+        import streamlit.components.v1 as components
+        components.html('''
+            <script>
                 (function() {
                     var doc = window.parent.document;
                     var anchor = doc.getElementById('ec-top-anchor');
