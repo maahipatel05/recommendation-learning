@@ -939,7 +939,20 @@ with home_tab:
     # ────────────────────────────────────────────────────────────────────────
     elif st.session_state.phase == "results":
         import streamlit.components.v1 as components
-        components.html('''<script>window.parent.document.querySelector(".main").scrollTo(0,0);</script>''', height=0)
+        components.html('''
+            <script>
+                (function() {
+                    var doc = window.parent.document;
+                    var anchor = doc.getElementById('ec-top-anchor');
+                    if (anchor) {
+                        var scrollInterval = setInterval(function() {
+                            anchor.scrollIntoView({behavior: "instant", block: "start"});
+                        }, 100);
+                        setTimeout(function() { clearInterval(scrollInterval); }, 3000);
+                    }
+                })();
+            </script>
+        ''', height=0)
         
 
 
