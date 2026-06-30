@@ -487,7 +487,10 @@
     <script>
         var nodeRegistry = {"ch10_sec1_obj1": {"id": "ch10_sec1_obj1", "text": "Describe the structure of prokaryotic and eukaryotic genomes", "prereqs": ["ch4_sec3_obj1", "ch4_sec3_obj2", "ch3_sec5_obj2", "ch3_sec5_obj1"]}, "ch4_sec3_obj1": {"id": "ch4_sec3_obj1", "text": "Describe the structure of eukaryotic cells", "prereqs": []}, "ch4_sec3_obj2": {"id": "ch4_sec3_obj2", "text": "Compare animal cells with plant cells", "prereqs": []}, "ch3_sec5_obj2": {"id": "ch3_sec5_obj2", "text": "Explain DNA's structure and role", "prereqs": []}, "ch3_sec5_obj1": {"id": "ch3_sec5_obj1", "text": "Describe nucleic acids' structure and define the two types", "prereqs": []}, "ch10_sec1_obj2": {"id": "ch10_sec1_obj2", "text": "Distinguish between chromosomes, genes, and traits", "prereqs": ["ch4_sec3_obj4", "ch4_sec3_obj1", "ch3_sec5_obj2", "ch3_sec5_obj1"]}, "ch4_sec3_obj4": {"id": "ch4_sec3_obj4", "text": "Summarize the functions of the major cell organelles", "prereqs": []}, "ch10_sec1_obj3": {"id": "ch10_sec1_obj3", "text": "Describe the mechanisms of chromosome compaction", "prereqs": ["ch4_sec3_obj4", "ch4_sec3_obj1", "ch3_sec5_obj2", "ch3_sec5_obj1"]}, "ch10_sec2_obj1": {"id": "ch10_sec2_obj1", "text": "Describe the three stages of interphase", "prereqs": ["ch10_sec1_obj1", "ch6_sec4_obj2", "ch6_sec4_obj1"]}, "ch6_sec4_obj2": {"id": "ch6_sec4_obj2", "text": "Describe how energy releases through ATP hydrolysis", "prereqs": []}, "ch6_sec4_obj1": {"id": "ch6_sec4_obj1", "text": "Explain ATP's role as the cellular energy currency", "prereqs": []}, "ch10_sec2_obj2": {"id": "ch10_sec2_obj2", "text": "Discuss the behavior of chromosomes during karyokinesis/mitosis", "prereqs": ["ch10_sec1_obj1", "ch10_sec1_obj3", "ch10_sec1_obj2"]}};
 
-        setTimeout(function() {
+        var initInterval = setInterval(function() {
+            if (typeof svgPanZoom === 'undefined') return;
+            clearInterval(initInterval);
+
             var panZoomInstance = svgPanZoom('#interactive-svg', {
                 zoomEnabled: true,
                 controlIconsEnabled: false,
@@ -656,7 +659,7 @@
                 panZoomInstance.fit();
                 panZoomInstance.center();
             });
-        }, 300);
+        }, 100);
     </script>
 
 </body>
