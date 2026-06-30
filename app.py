@@ -880,23 +880,6 @@ with home_tab:
                         {ui_overlay}
                         <iframe id="ec-vis-iframe" src="data:text/html;base64,{b64_html}" style="flex-grow:1; width:100%; height:72vh; min-height:600px; border:none; display:block;"></iframe>
                         
-                        <div style="position: absolute; bottom: 30px; right: 30px; z-index: 9999999; animation: ecFadeInBtn 0.5s ease 3s forwards; opacity: 0;">
-                            <style>@keyframes ecFadeInBtn {{ to {{ opacity: 1; }} }}</style>
-                            <button onclick="
-                                var overlay = parent.document.getElementById('ec-overlay');
-                                if (overlay) {{
-                                    overlay.style.opacity = '0';
-                                    setTimeout(function() {{ if(overlay) overlay.remove(); }}, 300);
-                                }}
-                                var btns = parent.document.querySelectorAll('button');
-                                for(var i=0; i<btns.length; i++) {{
-                                    if(btns[i].innerText.includes('HIDDEN_TRIGGER')) {{
-                                        btns[i].click();
-                                        break;
-                                    }}
-                                }}
-                            " style="padding: 16px 32px; font-size: 18px; font-weight: 800; background-color: #4f46e5; color: white; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 10px 25px rgba(0,0,0,0.5); transition: background-color 0.2s;">View Results →</button>
-                        </div>
                       </div>
                     `;
                 }})();
@@ -917,20 +900,37 @@ with home_tab:
     # PHASE 2.5 — ANIMATION WAIT STATE
     # ────────────────────────────────────────────────────────────────────────
     elif st.session_state.phase == "anim":
-        # The visible button is rendered directly in the HTML overlay above.
-        # This hidden Streamlit button catches the JS click event to trigger the state change.
+        # Force the Streamlit button to float above the full-screen overlay
         st.markdown("""
         <style>
-            div[data-testid="stMain"] div[data-testid="stButton"] {
-                opacity: 0 !important;
-                position: absolute !important;
-                z-index: -100 !important;
-                pointer-events: none !important;
+            div[data-testid="stButton"] {
+                position: fixed !important;
+                bottom: 30px !important;
+                right: 30px !important;
+                z-index: 9999999 !important;
+                animation: ecFadeInBtn 0.5s ease 3s forwards;
+                opacity: 0;
             }
+            div[data-testid="stButton"] button {
+                padding: 16px 32px !important;
+                font-size: 18px !important;
+                font-weight: 800 !important;
+                background-color: #4f46e5 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 12px !important;
+                cursor: pointer !important;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
+            }
+            div[data-testid="stButton"] button p {
+                font-size: 18px !important;
+                font-weight: 800 !important;
+            }
+            @keyframes ecFadeInBtn { to { opacity: 1; } }
         </style>
         """, unsafe_allow_html=True)
         
-        if st.button("HIDDEN_TRIGGER", use_container_width=False):
+        if st.button("View Results →", use_container_width=False):
             st.session_state.phase = "results"
             st.rerun()
 
